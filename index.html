@@ -4,7 +4,7 @@
 
   <script>
     // Connect to Binary.js server
-    var client = new BinaryClient('ws://localhost:9000');
+    var client = new BinaryClient('ws://localhost:80');
     // Received new stream from server!
     client.on('stream', function(stream, meta){    
       // Buffer for parts
