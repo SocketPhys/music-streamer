@@ -1,11 +1,12 @@
 <html>
 <head>
-    <script src="http://cdn.jsdelivr.net/binaryjs/0.2.1/binary.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/binaryjs/0.2.1/binary.min.js"></script>
 
   <script>
     // Connect to Binary.js server
-    var client = new BinaryClient('ws://localhost:80');
+    var client = new BinaryClient(window.location.origin.replace(/^http/, 'ws'));
     // Received new stream from server!
+    console.log("ASdf");
     client.on('stream', function(stream, meta){    
       // Buffer for parts
       var parts = [];
@@ -25,5 +26,8 @@
   </script>
 </head>
 <body>
+</body>
+</html>
+
 </body>
 </html>
