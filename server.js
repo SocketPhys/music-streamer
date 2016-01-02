@@ -7,7 +7,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-var server = http.listen(80, function(){
+var server = http.listen((process.env.PORT || 5000), function(){
   console.log('listening on *:3050');
 });
 // Start Binary.js server
